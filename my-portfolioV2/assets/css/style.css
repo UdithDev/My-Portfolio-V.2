@@ -158,6 +158,12 @@ section {
     cursor: pointer;
 }
 
+.home-img img:hover {
+    box-shadow: 0 0 15px var(--main-color),
+    0 0 15px var(--main-color),
+    0 0 70px var(--main-color);
+}
+
 
 .home .home-content h1 {
     font-size: 6rem;
@@ -202,13 +208,19 @@ span {
     background: var(--main-color);
 }
 
-.button{
+.home-button {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.button {
     all: unset;
     display: flex;
     align-items: center;
     position: relative;
     padding: 0.6em 2em;
-    border: medium var(--main-color);
+    border: medium solid var(--main-color);
     border-radius: 0.25em;
     color: var(--main-color);
     font-size: 1.5em;
@@ -219,16 +231,78 @@ span {
     user-select: none;
 }
 
-.button p{
+.button p {
     z-index: 1;
 }
 
-.button:hover{
+.button:hover {
     color: black;
+    box-shadow: 0 0 25px var(--main-color);
 }
 
-button:active{
+button:active {
     border-color: var(--main-color);
 }
+
+.button::after, .button::before {
+    content: '';
+    position: absolute;
+    width: 12em;
+    aspect-ratio: 1;
+    background: var(--main-color);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+
+
+.button::before {
+    left: 0;
+    transform: translateX(-10em);
+}
+
+.button::after {
+    right: 0;
+    transform: translateX(10em);
+}
+
+
+.button:hover::before {
+    transform: translateX(-1em);
+}
+
+.button:hover::after {
+    transform: translateX(1em);
+}
+
+.button:active::before,
+.button:active::after {
+    background: transparent;
+}
+
+
+.button2::after, .button2::before {
+    content: '';
+    position: absolute;
+    width: 18em;
+    aspect-ratio: 1;
+    background: var(--main-color);
+    opacity: 50%;
+    border-radius: 50%;
+    transition: transform 500ms, background 300ms;
+}
+
+
+.button2::before {
+    left: 0;
+    transform: translateX(-16em);
+}
+
+.button2::after {
+    right: 0;
+    transform: translateX(16em);
+}
+
+
 
 
