@@ -503,6 +503,22 @@ button:active {
     color: #000000;
 }
 
+@media (max-width: 991px) {
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .services{
+        padding-bottom: 7rem;
+    }
+}
+
+@media (max-width: 895px) {
+    .services .services-container{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+
 
 
 
